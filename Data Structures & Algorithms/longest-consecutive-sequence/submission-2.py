@@ -14,11 +14,13 @@ class Solution:
         for n in nums_set:
             start_seq = n
             consecutives = 1
+            # Find the start of the sequence
             while True:
                 if (start_seq - 1) in nums_set:
                     start_seq -= 1
                 else:
                     break
+            # Find the length of the sequence
             while True:
                 if (start_seq + 1) in nums_set:
                     consecutives += 1
